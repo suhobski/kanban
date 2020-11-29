@@ -360,4 +360,40 @@ li {
   outline: 0;
   outline-offset: 0;
 }
+
+.page {
+  padding-top: 40px;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #5A5A65;
+}
+
+.board {
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+.board__title {
+  font-size: 30px;
+}
+
+.board__description {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.board__cards-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=main.css.map */
