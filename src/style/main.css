@@ -391,9 +391,58 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.task {
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.task__title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+  color: #212121;
+}
+
+.task__comment {
+  position: relative;
+  display: block;
+  height: 34px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.task__comment-owner {
+  padding-right: 3px;
+  font-weight: 600;
+}
+
+.task__button--full-comment {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  padding-right: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+  border: none;
+  background: #FFFFFF;
+  cursor: pointer;
+  z-index: 30;
 }
 
 .card {
