@@ -463,12 +463,28 @@ li {
   border-radius: 12px;
 }
 
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card__title {
   margin-bottom: 8px;
   padding: 4px 12px;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: -0.2px;
+  color: #4D4D4D;
+  background: #FFDCE0;
+  border-radius: 20px;
+}
+
+.card__counter {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
   letter-spacing: -0.2px;
   color: #4D4D4D;
   background: #FFDCE0;

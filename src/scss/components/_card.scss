@@ -9,6 +9,11 @@
   background: #F3F4F4;
   border-radius: 12px;
 
+  &__header{
+    display: flex;
+    
+  }
+
   &__title{
     margin-bottom: 8px;
     padding: 4px 12px;
@@ -16,6 +21,18 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
+    letter-spacing: -0.2px;
+    color: #4D4D4D;
+
+    background: #FFDCE0;
+    border-radius: 20px;
+  }
+
+  &__counter{
+    display: block;
+
+    font-weight: 600;
+    font-size: 16px;
     letter-spacing: -0.2px;
     color: #4D4D4D;
 
