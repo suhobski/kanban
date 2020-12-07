@@ -394,6 +394,7 @@ li {
 }
 
 .task {
+  position: relative;
   margin-bottom: 8px;
   padding: 16px;
   background: #FFFFFF;
@@ -410,6 +411,17 @@ li {
   line-height: 19px;
   letter-spacing: -0.2px;
   color: #212121;
+}
+
+.task__button--menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  background: #DDDDDD;
 }
 
 .task__comment {
