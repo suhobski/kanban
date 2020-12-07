@@ -484,8 +484,8 @@ li {
   letter-spacing: -0.2px;
   color: #4D4D4D;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .card__title--todo {
@@ -497,6 +497,31 @@ li {
 }
 
 .card__title--done {
+  background: #F0E7F6;
+}
+
+.card__add-task-button {
+  border: none;
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+  color: #4D4D4D;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card__add-task-button--todo {
+  background: #FFDCE0;
+}
+
+.card__add-task-button--in-progress {
+  background: #CBDFD8;
+}
+
+.card__add-task-button--done {
   background: #F0E7F6;
 }
 /*# sourceMappingURL=main.css.map */
