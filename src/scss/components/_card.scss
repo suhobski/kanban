@@ -9,6 +9,10 @@
   background: #F3F4F4;
   border-radius: 12px;
 
+  &:nth-child(2) {
+    margin: 0 20px;
+  }
+
   &__header{
     display: flex;
     
@@ -40,4 +44,3 @@
     border-radius: 20px;
   }
 }
-

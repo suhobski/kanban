@@ -463,6 +463,10 @@ li {
   border-radius: 12px;
 }
 
+.card:nth-child(2) {
+  margin: 0 20px;
+}
+
 .card__header {
   display: -webkit-box;
   display: -ms-flexbox;
