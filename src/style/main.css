@@ -483,7 +483,18 @@ li {
   line-height: 19px;
   letter-spacing: -0.2px;
   color: #4D4D4D;
-  background: #FFDCE0;
   border-radius: 20px;
+}
+
+.card__title--todo {
+  background: #FFDCE0;
+}
+
+.card__title--in-progress {
+  background: #CBDFD8;
+}
+
+.card__title--done {
+  background: #F0E7F6;
 }
 /*# sourceMappingURL=main.css.map */

@@ -29,8 +29,19 @@
     letter-spacing: -0.2px;
     color: #4D4D4D;
 
-    background: #FFDCE0;
     border-radius: 20px;
+
+    &--todo{
+      background: $rose;
+    }
+
+    &--in-progress{
+      background: $green;
+    }
+
+    &--done{
+      background: $lavender;
+    }
   }
 
 }
