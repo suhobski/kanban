@@ -394,6 +394,7 @@ li {
 }
 
 .task {
+  margin-bottom: 8px;
   padding: 16px;
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
