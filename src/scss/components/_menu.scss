@@ -1,0 +1,53 @@
+.menu {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+
+  width: 20px;
+  height: 24px;
+
+  border-radius: 10px;
+  outline: none;
+  background:#F3F4F4;
+  opacity: 0;
+
+  transition: .3s;
+
+  &__button{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    background: #212121;
+  }
+
+  &__button::before,
+  &__button::after {
+    position: absolute;
+    content: '';
+    right: 0;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    background: #212121;
+  }
+
+  &__button::before {
+    top: 6px;
+  }
+
+  &__button::after {
+    top: -6px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+

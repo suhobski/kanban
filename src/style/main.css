@@ -393,6 +393,52 @@ li {
   display: flex;
 }
 
+.menu {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  width: 20px;
+  height: 24px;
+  border-radius: 10px;
+  outline: none;
+  background: #F3F4F4;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.menu__button {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+.menu__button::before, .menu__button::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+.menu__button::before {
+  top: 6px;
+}
+
+.menu__button::after {
+  top: -6px;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
 .task {
   position: relative;
   margin-bottom: 8px;
@@ -411,17 +457,6 @@ li {
   line-height: 19px;
   letter-spacing: -0.2px;
   color: #212121;
-}
-
-.task__button--menu {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 16px;
-  height: 16px;
-  border: none;
-  outline: none;
-  background: #DDDDDD;
 }
 
 .task__comment {
@@ -455,6 +490,10 @@ li {
   border: none;
   background: #FFFFFF;
   cursor: pointer;
+}
+
+.task:hover .menu {
+  opacity: 1;
 }
 
 .card {
