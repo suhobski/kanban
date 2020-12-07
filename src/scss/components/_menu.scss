@@ -11,8 +11,9 @@
   background:#F3F4F4;
   opacity: 0;
 
-  transition: .3s;
+  // transition: .3s;
 
+  // Menu button
   &__button{
     position: absolute;
     top: 10px;
@@ -46,8 +47,39 @@
     top: -6px;
   }
 
+  // Menu List
+  &__list {
+    position: absolute;
+    top: 24px;
+    right: 12px;
+
+    width: 100px;
+    padding: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #5A5A65;
+    text-overflow: ellipsis;
+
+    background: #F3F4F4;
+    border-radius: 8px;
+
+    z-index: 30;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
   &:hover {
     cursor: pointer;
   }
+  
 }
 

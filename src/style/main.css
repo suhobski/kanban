@@ -403,8 +403,6 @@ li {
   outline: none;
   background: #F3F4F4;
   opacity: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .menu__button {
@@ -433,6 +431,31 @@ li {
 
 .menu__button::after {
   top: -6px;
+}
+
+.menu__list {
+  position: absolute;
+  top: 24px;
+  right: 12px;
+  width: 100px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+  text-overflow: ellipsis;
+  background: #F3F4F4;
+  border-radius: 8px;
+  z-index: 30;
+}
+
+.menu__item {
+  margin-bottom: 8px;
+}
+
+.menu__item:last-child {
+  margin-bottom: 0;
 }
 
 .menu:hover {
