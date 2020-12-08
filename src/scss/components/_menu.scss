@@ -53,7 +53,7 @@
     top: 24px;
     right: 12px;
 
-    width: 100px;
+    min-width: 75px;
     padding: 8px;
 
     font-size: 14px;
@@ -62,6 +62,8 @@
     letter-spacing: 0.1px;
     color: #5A5A65;
     text-overflow: ellipsis;
+    white-space: nowrap;
+
 
     background: #F3F4F4;
     border-radius: 8px;
