@@ -1,10 +1,4 @@
-// раскрытие комментария при нажатии на кнопку. Вешаем событие на все кнопки
-let taskButtons = document.querySelectorAll('.task__button--full-comment')
+import {viewFullComments} from "./view"
 
-taskButtons.forEach(taskButton => {
-  taskButton.addEventListener('click', (event) => {
-    let comment = event.target.parentNode
-    comment.style.height = 'auto'
-    event.target.style.display = 'none'
-  })
-})
+//view
+viewFullComments()
