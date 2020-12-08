@@ -448,6 +448,7 @@ li {
   white-space: nowrap;
   background: #F3F4F4;
   border-radius: 8px;
+  visibility: hidden;
   z-index: 30;
 }
 
@@ -461,6 +462,10 @@ li {
 
 .menu:hover {
   cursor: pointer;
+}
+
+.menu__display {
+  visibility: visible;
 }
 
 .task {

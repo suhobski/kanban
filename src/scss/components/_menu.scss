@@ -67,6 +67,7 @@
 
     background: #F3F4F4;
     border-radius: 8px;
+    visibility: hidden;
 
     z-index: 30;
   }
@@ -81,6 +82,10 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  &__display{
+    visibility: visible;
   }
   
 }

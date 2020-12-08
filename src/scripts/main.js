@@ -1,4 +1,5 @@
-import {viewFullComments} from "./view"
+import {displayFullComment, displayMenu} from "./view.js"
 
 //view
-viewFullComments()
+displayFullComment()
+displayMenu()
