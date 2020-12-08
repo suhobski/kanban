@@ -399,7 +399,7 @@ li {
   right: 8px;
   width: 20px;
   height: 24px;
-  border-radius: 10px;
+  border-radius: 8px;
   outline: none;
   background: #F3F4F4;
   opacity: 0;
@@ -573,17 +573,39 @@ li {
   background: #F0E7F6;
 }
 
-.card__add-task-button {
-  border: none;
+.card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card__button {
+  width: 100px;
+  margin-left: 8px;
   padding: 4px 12px;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.2px;
   color: #4D4D4D;
+  border: none;
   border-radius: 20px;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card__button--todo {
   background: #FFDCE0;
+}
+
+.card__button--in-progress {
+  background: #CBDFD8;
+}
+
+.card__button--done {
+  background: #F0E7F6;
 }
 /*# sourceMappingURL=main.css.map */
