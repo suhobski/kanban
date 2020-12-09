@@ -1,17 +1,12 @@
 .menu {
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  position: relative;
+  left: 8px;
 
   width: 20px;
   height: 24px;
 
-  border-radius: 8px;
   outline: none;
-  background:#F3F4F4;
-  opacity: 0;
-
-  // transition: .3s;
+  background:transparent;
 
   // Menu button
   &__button{
@@ -23,7 +18,7 @@
     height: 4px;
 
     border-radius: 50%;
-    background: #212121;
+    background: #5A5A65;
   }
 
   &__button::before,
@@ -36,7 +31,7 @@
     height: 4px;
 
     border-radius: 50%;
-    background: #212121;
+    background: #5A5A65;
   }
 
   &__button::before {
@@ -54,7 +49,6 @@
     right: 12px;
 
     min-width: 75px;
-    padding: 8px;
 
     font-size: 14px;
     font-weight: 600;
@@ -64,27 +58,34 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 
-
     background: #F3F4F4;
     border-radius: 8px;
+    overflow: hidden;
     visibility: hidden;
 
     z-index: 30;
   }
 
   &__item {
-    margin-bottom: 8px;
+    padding: 6px;
+
+    opacity: 0.99;
+    z-index: 30;
   }
 
   &__item:last-child {
     margin-bottom: 0;
   }
 
+  &__item:hover {
+    background: #DDDDDD;
+  }
+
   &:hover {
     cursor: pointer;
   }
 
-  &__display{
+  &__display {
     visibility: visible;
   }
   

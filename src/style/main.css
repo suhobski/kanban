@@ -394,15 +394,12 @@ li {
 }
 
 .menu {
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  position: relative;
+  left: 8px;
   width: 20px;
   height: 24px;
-  border-radius: 8px;
   outline: none;
-  background: #F3F4F4;
-  opacity: 0;
+  background: transparent;
 }
 
 .menu__button {
@@ -412,7 +409,7 @@ li {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #212121;
+  background: #5A5A65;
 }
 
 .menu__button::before, .menu__button::after {
@@ -422,7 +419,7 @@ li {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #212121;
+  background: #5A5A65;
 }
 
 .menu__button::before {
@@ -438,7 +435,6 @@ li {
   top: 24px;
   right: 12px;
   min-width: 75px;
-  padding: 8px;
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
@@ -448,16 +444,23 @@ li {
   white-space: nowrap;
   background: #F3F4F4;
   border-radius: 8px;
+  overflow: hidden;
   visibility: hidden;
   z-index: 30;
 }
 
 .menu__item {
-  margin-bottom: 8px;
+  padding: 6px;
+  opacity: 0.99;
+  z-index: 30;
 }
 
 .menu__item:last-child {
   margin-bottom: 0;
+}
+
+.menu__item:hover {
+  background: #DDDDDD;
 }
 
 .menu:hover {
@@ -479,6 +482,30 @@ li {
   border-radius: 8px;
 }
 
+.task__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #DDDDDD;
+  z-index: 0;
+}
+
+.task__owner {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+}
+
 .task__title {
   margin-bottom: 8px;
   font-weight: 600;
@@ -496,7 +523,6 @@ li {
   line-height: 17px;
   letter-spacing: 0.1px;
   color: #5A5A65;
-  text-overflow: ellipsis;
   overflow: hidden;
 }
 
