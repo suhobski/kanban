@@ -9,9 +9,9 @@
   justify-content: center;
   align-items: center;
 
-  // visibility: hidden;
+  visibility: hidden;
   background-color: rgba(0, 0, 0, .5);
-  // opacity: 0;
+  opacity: 0;
   transition: all .4s linear;
   
   &__container {
@@ -50,7 +50,9 @@
   }
 
   &__button {
+    margin: none;
     border: 1px solid #DDDDDD;
+    box-shadow: none;
   }
 
   &__button:hover {
