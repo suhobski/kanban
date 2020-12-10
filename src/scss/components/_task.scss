@@ -8,6 +8,8 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
 
+  z-index: 0;
+
   &__header {
     position: relative;
 
@@ -19,7 +21,7 @@
     padding-bottom: 4px;
     border-bottom: 1px solid #DDDDDD;
 
-    z-index: 0;
+    z-index: 20;
   }
 
   &__owner {
@@ -51,6 +53,8 @@
     color: #5A5A65;
 
     overflow: hidden;
+
+    z-index: 0;
   }
 
   &__comment-owner{
