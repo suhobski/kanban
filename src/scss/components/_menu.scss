@@ -60,24 +60,29 @@
 
     background: #F3F4F4;
     border-radius: 8px;
-    overflow: hidden;
+    border: 1px solid #DDDDDD;
     visibility: hidden;
 
     z-index: 30;
   }
 
   &__item {
-    padding: 6px;
+    padding: .5em;
 
+    border-bottom: 1px solid #DDDDDD;
     opacity: 0.99;
+
     z-index: 30;
   }
 
   &__item:last-child {
     margin-bottom: 0;
+
+    border-bottom: none;
   }
 
-  &__item:hover {
+  &__item:hover,
+  &__item:active {
     background: #DDDDDD;
   }
 
