@@ -551,6 +551,139 @@ li {
   opacity: 1;
 }
 
+.modal-add-task {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.modal-add-task__container {
+  position: absolute;
+  top: 5em;
+  left: calc(50% - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.modal-add-task.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-add-task__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+  padding: 8px;
+  min-width: 286px;
+  background: #F3F4F4;
+  border-radius: 12px;
+}
+
+.modal-add-task__field {
+  margin-bottom: 1em;
+  padding: .5em 1em;
+  color: #5A5A65;
+  border: 1px solid #DDDDDD;
+  border-radius: 12px;
+  outline: none;
+}
+
+.modal-add-task__field--title {
+  resize: none;
+  overflow: hidden;
+}
+
+.modal-add-task__field--user-list {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.modal-add-task__field--user * {
+  width: 286px;
+}
+
+.modal-add-task__field--user {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+  white-space: nowrap;
+}
+
+.modal-add-task__field--comment {
+  resize: none;
+}
+
+.modal-add-task__field:last-child {
+  margin-bottom: 0;
+}
+
+.modal-add-task__title {
+  font-size: 28px;
+  padding-top: 28px;
+  margin-bottom: 28px;
+}
+
+.modal-add-task__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.modal-add-task__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-add-task__btn:hover {
+  background-color: #444;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
