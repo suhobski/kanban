@@ -1,24 +1,28 @@
 .modal-add-task {
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  // visibility: hidden;
   background-color: rgba(0, 0, 0, .5);
-  opacity: 0;
+  // opacity: 0;
   transition: all .4s linear;
   
   &__container {
-    position: absolute;
-    top: 5em;
-    left: calc(50% - 150px);
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    min-width: 230px;
+    max-width: 500px;
+    margin: 0 1em;
     padding: 16px;
 
     border-radius: 1em;
@@ -39,6 +43,7 @@
     min-width: 286px;
       
     background: #F3F4F4;
+    border: 1px solid #DDDDDD;
     border-radius: 12px;
   }
 
@@ -59,10 +64,6 @@
 
     &--user-list {
       appearance: none; 
-    }
-
-    &--user * {
-      width: 286px;
     }
 
     &--user {
@@ -94,19 +95,12 @@
     width: 100%;
   }
 
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    color: white;
-    background-color: #333;
-    border-radius: 50%;
-    cursor: pointer;
+  &__button {
+    border: 1px solid #DDDDDD;
+    box-shadow: none;
   }
 
-  &__btn:hover {
-    background-color: #444;
+  &__button:hover {
+    background: #DDDDDD;
   }
 }
