@@ -400,12 +400,15 @@ li {
   left: 8px;
   width: 20px;
   height: 24px;
-  background: #F3F4F4;
   border-radius: 8px;
   outline: none;
   opacity: 0;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.menu:hover {
+  background: #F3F4F4;
 }
 
 .menu__button {
@@ -448,10 +451,13 @@ li {
   color: #5A5A65;
   text-overflow: ellipsis;
   white-space: nowrap;
+  visibility: hidden;
   background: #F3F4F4;
   border-radius: 8px;
   border: 1px solid #DDDDDD;
-  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
   z-index: 30;
 }
 
@@ -477,6 +483,7 @@ li {
 
 .menu__display {
   visibility: visible;
+  opacity: 1;
 }
 
 .task {
