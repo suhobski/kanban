@@ -9,7 +9,7 @@
 <script src="/main.d59c9882.js"></script></head>
 <body>
 <div class="page">
-  <div class="board__cards-wrap">
+  <div class="board">
     <div class="card">
       <div class="card__header">
         <h2 class="card__title card__title--todo">To do</h2>
@@ -30,7 +30,7 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
         <li class="task">
           <div class="task__header">
@@ -46,11 +46,11 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
       </ul>
       <div class="card__footer">
-        <button class="card__button card__button--todo">Add task</button>
+        <button class="card__button card__button--todo button__add-task">Add task</button>
         <button class="card__button card__button--todo">Clear all</button>
       </div>
     </div>
@@ -72,7 +72,7 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
         <li class="task">
           <div class="task__header">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
       </ul>
       <div class="card__footer">
@@ -111,7 +111,7 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
         <li class="task">
           <div class="task__header">
@@ -125,7 +125,7 @@
             </div>
           </div>
           <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+          <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
         </li>
       </ul>
       <div class="card__footer">
@@ -141,17 +141,13 @@
             <textarea class="modal-add-task__field modal-add-task__field--title" placeholder="Title" rows="1"></textarea> 
             <select class="modal-add-task__field modal-add-task__field--user-list">
               <option class="modal-add-task__field--user" selected="" disabled="">Chose user...</option>
-              <option class="modal-add-task__field--user">Name Surname</option>
-              <option class="modal-add-task__field--user">Name Surname</option>
-              <option class="modal-add-task__field--user">Name Surname</option>
-              <option class="modal-add-task__field--user">Name Surname</option>
             </select>
             <input class="modal-add-task__field modal-add-task__field--login" type="date" placeholder="login">
             <textarea class="modal-add-task__field modal-add-task__field--comment" placeholder="Add comment..." rows="3"></textarea>
         </div>
         <div class="modal-add-task__footer">
-          <button class="card__button modal-add-task__button">OK</button>
-          <button class="card__button modal-add-task__button">Cancel</button>
+          <button class="card__button modal-add-task__button modal-add-task__button--ok">OK</button>
+          <button class="card__button modal-add-task__button modal-add-task__button--cancel">Cancel</button>
         </div>
     </div>
   </div><!-- / modal-add-task -->
@@ -183,7 +179,7 @@
               </div>
             </div>
             <h3 class="task__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quisquam. Voluptatum rerum nisi cupiditate. Facilis.</h3>
-            <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...</button></p>
+            <p class="task__comment"><span class="task__comment-owner">Owner:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptatibus earum neque facilis ab deserunt? Itaque quaerat excepturi eaque quisquam!<button class="task__button--full-comment">...more</button></p>
           </li>
         </div>
         <div class="modal-delete-task__footer">
