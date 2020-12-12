@@ -657,18 +657,36 @@ li {
   border-radius: 20px;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.card__button:hover {
+  cursor: pointer;
 }
 
 .card__button--todo {
   background: #FFDCE0;
 }
 
+.card__button--todo:hover {
+  background: #FAC6CC;
+}
+
 .card__button--in-progress {
   background: #CBDFD8;
 }
 
+.card__button--in-progress:hover {
+  background: #A9CABE;
+}
+
 .card__button--done {
   background: #F0E7F6;
+}
+
+.card__button--done:hover {
+  background: #D4C5DF;
 }
 
 .modal-add-task {

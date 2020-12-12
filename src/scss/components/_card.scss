@@ -74,16 +74,34 @@
     border-radius: 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 
+    transition: .2s linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+
     &--todo{
       background: $rose;
+
+      &:hover {
+        background: #FAC6CC;
+      }
     }
     
     &--in-progress {
       background: $green;
+
+      &:hover {
+        background: #A9CABE;
+      }
     }
 
     &--done{
       background: $lavender;
+
+      &:hover {
+        background: #D4C5DF;
+      }
     }
     
   }
