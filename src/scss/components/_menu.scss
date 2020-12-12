@@ -5,8 +5,13 @@
   width: 20px;
   height: 24px;
 
+  background: #F3F4F4;
+  border-radius: 8px;
   outline: none;
-  background:transparent;
+
+  opacity: 0;
+
+  transition: all 0.4s linear;
 
   // Menu button
   &__button{

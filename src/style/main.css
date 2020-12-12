@@ -400,8 +400,12 @@ li {
   left: 8px;
   width: 20px;
   height: 24px;
+  background: #F3F4F4;
+  border-radius: 8px;
   outline: none;
-  background: transparent;
+  opacity: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .menu__button {
