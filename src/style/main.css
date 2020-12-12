@@ -409,6 +409,7 @@ li {
 
 .menu:hover {
   background: #F3F4F4;
+  cursor: pointer;
 }
 
 .menu__button {
@@ -464,8 +465,9 @@ li {
 .menu__item {
   padding: .5em;
   border-bottom: 1px solid #DDDDDD;
-  opacity: 0.99;
   z-index: 30;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .menu__item:last-child {
@@ -475,10 +477,6 @@ li {
 
 .menu__item:hover, .menu__item:active {
   background: #DDDDDD;
-}
-
-.menu:hover {
-  cursor: pointer;
 }
 
 .menu__display {

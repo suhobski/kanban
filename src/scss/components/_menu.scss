@@ -14,6 +14,8 @@
 
   &:hover {
     background: #F3F4F4;
+    
+    cursor: pointer;
   }
 
   // Menu button
@@ -81,24 +83,21 @@
     padding: .5em;
 
     border-bottom: 1px solid #DDDDDD;
-    opacity: 0.99;
 
     z-index: 30;
-  }
 
-  &__item:last-child {
-    margin-bottom: 0;
+    transition: 0.2s linear;
 
-    border-bottom: none;
-  }
+    &:last-child {
+      margin-bottom: 0;
+  
+      border-bottom: none;
+    }
 
-  &__item:hover,
-  &__item:active {
-    background: #DDDDDD;
-  }
-
-  &:hover {
-    cursor: pointer;
+    &:hover,
+    &:active {
+      background: #DDDDDD;
+    }
   }
 
   &__display {
