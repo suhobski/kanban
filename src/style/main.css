@@ -718,11 +718,6 @@ li {
   background-color: white;
 }
 
-.modal-add-task.active {
-  visibility: visible;
-  opacity: 1;
-}
-
 .modal-add-task__body {
   display: -webkit-box;
   display: -ms-flexbox;

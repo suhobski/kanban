@@ -24,11 +24,6 @@
     background-color: white;
   }
 
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
-
   &__body {
     @include xs {
       width: 286px;

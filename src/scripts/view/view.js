@@ -1,6 +1,6 @@
 import { displayFullComment } from './comment.js'
 import { viewMenu } from './taskMenu.js'
-import { displayModalAddTask, closeModalAddTask, createListOfUsers } from './viewModalAddTask.js'
+import { displayModalAddTask, closeModalAddTask, createListOfUsers } from './modalAddTask.js'
 
 export function view() {
   // комментарий задачи

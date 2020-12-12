@@ -3,19 +3,34 @@ import { getUsersData } from '../model/serverData.js'
 // Переменные
 let modalAddTask = document.querySelector('.modal-add-task')
 let buttonAddTask = document.querySelector('.button__add-task')
+let buttonOk = document.querySelector('.modal-add-task__button--ok')
 let buttonCancel = document.querySelector('.modal-add-task__button--cancel')
 
 // открыть модальное окно при нажатии кнопки "Add task"
 export function displayModalAddTask() {
   buttonAddTask.addEventListener('click', () => {
-    modalAddTask.classList.add('active')
+    modalAddTask.style.visibility = 'visible'
+    modalAddTask.style.opacity = '1'
   })
 }
 
-// закрыть модальное окно при нажатии кнопки "Cancel"
+// закрыть модальное окно
 export function closeModalAddTask() {
-  buttonCancel.addEventListener('click', () => {
-    modalAddTask.classList.remove('active')
+
+  // при нажатии кнопки "Cancel"
+  modalAddTask.addEventListener('click', event => {
+    if (event.target == buttonCancel || event.target == modalAddTask) {
+      modalAddTask.style.visibility = 'hidden'
+      modalAddTask.style.opacity = '0'
+    }
+  })
+
+  // при нажатии Escape
+  addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      modalAddTask.style.visibility = 'hidden'
+      modalAddTask.style.opacity = '0'
+    }
   })
 }
 
