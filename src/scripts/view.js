@@ -6,7 +6,7 @@ export function displayFullComment() {
     taskButton.addEventListener('click', (event) => {
       let comment = event.target.parentNode
       comment.style.height = 'auto'
-      event.target.style.display = 'none' // убираем три точки (...)
+      event.target.style.display = 'none' // убираем три точки (...), когда комментарий раскрыт
     })
   })
 }
@@ -33,6 +33,7 @@ export function displayMenu() {
     // закрыть меню если мышь уходит с task
     task.addEventListener('mouseleave', (event) => {
       let menuList = task.querySelector('.menu__list')
+      
       if (event.target == task) {
         menuList.classList.remove("menu__display")
       }
