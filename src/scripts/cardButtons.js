@@ -4,7 +4,6 @@ let modalAddTask = document.querySelector('.modal-add-task')
 
 export function displayModalAddTask() {
   buttonAddTask.addEventListener('click', () => {
-    console.log('CLICK')
     modalAddTask.classList.add('active')
   })
 }
