@@ -17,9 +17,10 @@ export function displayModalAddTask() {
 // закрыть модальное окно
 export function closeModalAddTask() {
 
-  // при нажатии кнопки "Cancel"
+  // при нажатии кнопки "OK", "Cancel" или мимо модального окна
   modalAddTask.addEventListener('click', event => {
-    if (event.target == buttonCancel || event.target == modalAddTask) {
+let buttonOk = document.querySelector('.modal-add-task__button--ok')
+    if (event.target == buttonCancel || event.target == modalAddTask || event.target == buttonOk) {
       modalAddTask.style.visibility = 'hidden'
       modalAddTask.style.opacity = '0'
     }
