@@ -362,16 +362,16 @@ li {
 }
 
 .page {
-  padding: 1em;
+  padding: 14px;
   width: 100%;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #555555;
 }
 
-@media (max-width: 795px) {
+@media (max-width: 768px) {
   .page {
-    padding: .5em;
+    padding: .5em 0;
   }
 }
 
@@ -389,8 +389,9 @@ li {
   max-width: 1200px;
 }
 
-@media (max-width: 795px) {
+@media (max-width: 768px) {
   .board {
+    padding: 0 .5em;
     overflow-x: scroll;
   }
 }
@@ -402,7 +403,6 @@ li {
   height: 24px;
   border-radius: 8px;
   outline: none;
-  opacity: 0;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -532,7 +532,6 @@ li {
 .task__comment {
   position: relative;
   display: block;
-  height: 37px;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.1px;
@@ -550,7 +549,7 @@ li {
   position: absolute;
   right: 0;
   bottom: 2px;
-  display: block;
+  display: none;
   padding-right: 5px;
   font-weight: 600;
   font-size: 14px;
@@ -559,11 +558,9 @@ li {
   color: #5A5A65;
   border: none;
   background: #FFFFFF;
+  -webkit-box-shadow: -10px 0 7px 2px #FFFFFF;
+          box-shadow: -10px 0 7px 2px #FFFFFF;
   cursor: pointer;
-}
-
-.task:hover .menu {
-  opacity: 1;
 }
 
 .card {
@@ -577,25 +574,48 @@ li {
   padding: 8px;
   position: relative;
   max-width: 500px;
-  min-width: 220px;
+  min-width: 176px;
   background: #F3F4F4;
   border-radius: 12px;
 }
 
-@media (max-width: 795px) {
+@media (max-width: 768px) {
   .card {
-    min-width: 50%;
+    min-width: 47%;
   }
 }
 
 @media (max-width: 576px) {
   .card {
-    min-width: 90%;
+    min-width: 96%;
   }
 }
 
 .card:nth-child(2) {
   margin: 0 14px;
+}
+
+@media (max-width: 768px) {
+  .card:nth-child(2) {
+    margin: 0 3.7%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card:nth-child(2) {
+    margin: 0 5%;
+  }
+}
+
+.card:last-child::before {
+  position: absolute;
+  right: -.5em;
+  height: 0;
+  display: block;
+  content: '';
+  width: .5em;
+  height: 100vh;
+  background: transparent;
 }
 
 .card__header {
