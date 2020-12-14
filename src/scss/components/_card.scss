@@ -1,6 +1,6 @@
 .card{
   @include sm {
-    min-width: 50%;
+    min-width: 46.85%;
   }
 
   @include xs {
@@ -13,13 +13,34 @@
 
   position: relative;
   max-width: 500px;
-  min-width: 220px;
+  min-width: 176px;
   
   background: #F3F4F4;
   border-radius: 12px;
 
   &:nth-child(2) {
+    @include sm {
+      margin: 0 3.7%;
+    }
+
+    @include xs {
+      margin: 0 5%;
+    }
     margin: 0 14px;
+  }
+
+  &:last-child::before {
+    position: absolute;
+    right: -.5em;
+    height: 0;
+
+    display: block;
+    content: '';
+
+    width: .5em;
+    height: 100vh;
+
+    background: transparent;
   }
 
   &__header{

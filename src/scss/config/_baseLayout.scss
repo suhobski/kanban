@@ -1,9 +1,9 @@
 .page {
   @include sm {
-    padding: .5em;
+    padding: .5em 0;
   }
 
-  padding: 1em;
+  padding: 14px;
 
   width: 100%;
   min-height: 100vh;
@@ -15,6 +15,7 @@
 
 .board {
   @include sm {
+    padding: 0 .5em;
     overflow-x: scroll;
   }
 
