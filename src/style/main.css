@@ -567,6 +567,7 @@ li {
 }
 
 .card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,6 +581,7 @@ li {
   min-width: 176px;
   background: #F3F4F4;
   border-radius: 12px;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
