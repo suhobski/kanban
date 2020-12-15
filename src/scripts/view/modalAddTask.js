@@ -15,22 +15,19 @@ export function displayModalAddTask() {
 }
 
 // закрыть модальное окно
-export function closeModalAddTask() {
+export function closeModalAddTaskListeners() {
 
-  // при нажатии кнопки "OK", "Cancel" или мимо модального окна
+  // при нажатии кнопки "Cancel" или мимо модального окна
   modalAddTask.addEventListener('click', event => {
-let buttonOk = document.querySelector('.modal-add-task__button--ok')
-    if (event.target == buttonCancel || event.target == modalAddTask || event.target == buttonOk) {
-      modalAddTask.style.visibility = 'hidden'
-      modalAddTask.style.opacity = '0'
+    if (event.target == buttonCancel || event.target == modalAddTask) {
+      closeModalAddTask()
     }
   })
 
   // при нажатии Escape
   addEventListener('keydown', event => {
     if (event.key === 'Escape') {
-      modalAddTask.style.visibility = 'hidden'
-      modalAddTask.style.opacity = '0'
+      closeModalAddTask()
     }
   })
 }
@@ -44,3 +41,10 @@ export function createListOfUsers() {
       `<option class="modal-add-task__field--user">${user.name}</option>`)
   }))
 }
+
+// закрыть модальное окно "Add task"
+export function closeModalAddTask() {
+  modalAddTask.style.visibility = 'hidden'
+  modalAddTask.style.opacity = '0'
+}
+
