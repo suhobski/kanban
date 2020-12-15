@@ -9,4 +9,8 @@ export class Task {
     this.comments = [comment]
   }
 
+  addComment(comment) {
+    this.comments.push(comment)
+  }
+
 }
