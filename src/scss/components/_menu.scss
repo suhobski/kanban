@@ -9,6 +9,7 @@
   outline: none;
 
   transition: all 0.2s linear;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:hover {
     background: #F3F4F4;
@@ -27,6 +28,7 @@
 
     border-radius: 50%;
     background: #5A5A65;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   &__button::before,
@@ -71,6 +73,7 @@
     border-radius: 8px;
     border: 1px solid #DDDDDD;
     opacity: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     transition: all .2s linear;
 

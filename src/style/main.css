@@ -405,6 +405,7 @@ li {
   outline: none;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menu:hover {
@@ -420,6 +421,7 @@ li {
   height: 4px;
   border-radius: 50%;
   background: #5A5A65;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menu__button::before, .menu__button::after {
@@ -457,6 +459,7 @@ li {
   border-radius: 8px;
   border: 1px solid #DDDDDD;
   opacity: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   z-index: 30;
