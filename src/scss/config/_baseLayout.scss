@@ -16,6 +16,12 @@
 .board {
   @include sm {
     padding: 0 .5em;
+    overflow: hidden;
+  }
+
+  @include xs {
+    padding: 0;
+    padding-right: 5vw;
     overflow-x: scroll;
   }
 

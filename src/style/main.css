@@ -392,6 +392,14 @@ li {
 @media (max-width: 768px) {
   .board {
     padding: 0 .5em;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 667px) {
+  .board {
+    padding: 0;
+    padding-right: 5vw;
     overflow-x: scroll;
   }
 }
@@ -533,37 +541,32 @@ li {
   padding: 8px;
   position: relative;
   max-width: 500px;
-  min-width: 176px;
+  min-width: 200px;
   background: #F3F4F4;
   border-radius: 12px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 667px) {
   .card {
-    max-width: 500px;
-    min-width: 90%;
+    min-width: 90vw;
+    margin: 0 5vw;
   }
 }
 
 .card:nth-child(2) {
-  margin: 0 14px;
+  margin: 0 1em;
 }
 
 @media (max-width: 768px) {
   .card:nth-child(2) {
-    margin: 0 3.7%;
+    margin: 0 .5em;
   }
 }
 
-.card:last-child::before {
-  position: absolute;
-  right: -.5em;
-  height: 0;
-  display: block;
-  content: '';
-  width: .5em;
-  height: 100vh;
-  background: transparent;
+@media (max-width: 667px) {
+  .card:nth-child(2) {
+    margin: 0 5vw;
+  }
 }
 
 .card__header {
@@ -702,7 +705,7 @@ li {
   border-radius: 12px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 667px) {
   .modal-add-task__body {
     width: 286px;
   }
