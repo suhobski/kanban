@@ -396,97 +396,6 @@ li {
   }
 }
 
-.menu {
-  position: relative;
-  left: 8px;
-  width: 20px;
-  height: 24px;
-  border-radius: 8px;
-  outline: none;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.menu:hover {
-  background: #F3F4F4;
-  cursor: pointer;
-}
-
-.menu__button {
-  position: absolute;
-  top: 10px;
-  right: 8px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #5A5A65;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.menu__button::before, .menu__button::after {
-  position: absolute;
-  content: '';
-  right: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #5A5A65;
-}
-
-.menu__button::before {
-  top: 6px;
-}
-
-.menu__button::after {
-  top: -6px;
-}
-
-.menu__list {
-  position: absolute;
-  top: 24px;
-  right: 12px;
-  min-width: 75px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 17px;
-  letter-spacing: 0.1px;
-  color: #5A5A65;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  visibility: hidden;
-  background: #F3F4F4;
-  border-radius: 8px;
-  border: 1px solid #DDDDDD;
-  opacity: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-  z-index: 30;
-}
-
-.menu__item {
-  padding: .5em;
-  border-bottom: 1px solid #DDDDDD;
-  z-index: 30;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-}
-
-.menu__item:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.menu__item:hover, .menu__item:active {
-  background: #DDDDDD;
-}
-
-.menu__display {
-  visibility: visible;
-  opacity: 1;
-}
-
 .task {
   position: relative;
   margin-bottom: 8px;
@@ -583,15 +492,10 @@ li {
   border-radius: 12px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .card {
-    min-width: 47%;
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
-    min-width: 96%;
+    max-width: 500px;
+    min-width: 90%;
   }
 }
 
@@ -605,7 +509,7 @@ li {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .card:nth-child(2) {
     margin: 0 5%;
   }
@@ -758,7 +662,7 @@ li {
   border-radius: 12px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .modal-add-task__body {
     width: 286px;
   }

@@ -1,5 +1,6 @@
 import { Task } from '../model/task.js'
 import { closeModalAddTask } from '../view/modalAddTask.js'
+import { displayTask } from '../view/taskView.js'
 
 let modalTitle = document.querySelector('.modal-add-task__field--title')
 let modalDate = document.querySelector('.modal-add-task__field--date')
@@ -19,6 +20,7 @@ export function addTask() {
       let task = new Task(taskTitle, taskUser, taskDate, taskComment)
       saveTask(task)
       closeModalAddTask()
+      // displayTask(task)
     } else { // показываем предупреждение, если поле не заполнено
       // проверка Title
       if (!taskTitle) {

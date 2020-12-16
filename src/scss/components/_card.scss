@@ -1,10 +1,11 @@
 .card{
-  @include sm {
-    min-width: 47%;
-  }
+  // @include sm {
+  //   min-width: 47%;
+  // }
 
   @include xs {
-    min-width: 96%;
+    max-width: 500px;
+    min-width: 90%;
   }
 
   position: relative;
@@ -19,8 +20,6 @@
   
   background: #F3F4F4;
   border-radius: 12px;
-
-  z-index: 10;
 
   &:nth-child(2) {
     @include sm {
