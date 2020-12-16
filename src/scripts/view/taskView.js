@@ -4,8 +4,6 @@ export function displayTask(task) {
   const {id, title, userName, date, comment} = task
   let commentHTML = ''
   
-  console.log(comment);
-
   if (comment) {
     commentHTML = `
     <p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>
@@ -19,6 +17,11 @@ export function displayTask(task) {
     </div>
     <h3 class="task__title">${title}</h3>
     ${commentHTML}
+    <div class="task__footer">
+      <span class="task__date">${date}</span>
+      <button class="task__button task__button--delete"></button>
+      <button class="task__button task__button--remove"></button>
+  </div>
   </li>
   `
 
