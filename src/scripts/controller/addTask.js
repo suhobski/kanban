@@ -13,14 +13,14 @@ export function addTask() {
     let taskTitle = modalTitle.value
     let taskUser = modalUser.options[modalUser.selectedIndex].value
     let taskDate = modalDate.value
-    let taskComment = {name: taskUser, comment: modalComment.value}
+    let taskComment = modalComment.value
 
     // проверка на заполнение обязательных полей
     if (taskTitle && taskUser && taskDate) {
       let task = new Task(taskTitle, taskUser, taskDate, taskComment)
       saveTask(task)
       closeModalAddTask()
-      // displayTask(task)
+      displayTask(task)
     } else { // показываем предупреждение, если поле не заполнено
       // проверка Title
       if (!taskTitle) {

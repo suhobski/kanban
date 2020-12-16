@@ -6,11 +6,7 @@ export class Task {
     this.title = title
     this.userName = userName
     this.date = date
-    this.comments = [comment]
-  }
-
-  addComment(comment) {
-    this.comments.push(comment)
+    this.comment = comment
   }
 
 }
