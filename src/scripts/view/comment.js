@@ -4,8 +4,8 @@ let commentButtons = document.querySelectorAll('.task__button--full-comment')
 export function hideLongComment() {
   commentButtons.forEach(commentButton => {
     let comment = commentButton.parentNode
-    if (comment.clientHeight > 37) {
-      comment.style.height = '37px'
+    if (comment.clientHeight > 36) {
+      comment.style.height = '36px'
       commentButton.style.display = 'block'
     }
   })

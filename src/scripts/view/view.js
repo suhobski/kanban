@@ -1,5 +1,6 @@
 import { hideLongComment,displayFullComment } from './comment.js'
 import { displayModalAddTask, closeModalAddTaskListeners, createListOfUsers } from './modalAddTask.js'
+import { deleteTask } from './taskView.js'
 
 export function view() {
   // комментарий задачи
@@ -11,4 +12,6 @@ export function view() {
   closeModalAddTaskListeners()
   createListOfUsers()
 
+  // task
+  deleteTask()
 }
