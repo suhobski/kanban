@@ -399,7 +399,7 @@ li {
 .task {
   position: relative;
   margin-bottom: 8px;
-  padding: 16px;
+  padding: 1em 1em .5em;
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
@@ -475,6 +475,52 @@ li {
   cursor: pointer;
 }
 
+.task__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+.task__date {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  color: #5A5A65;
+}
+
+.task__button {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: .5em;
+  background: #F3F4F4;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task__button:hover {
+  background-color: #E6E6E6;
+}
+
+.task__button--delete {
+  background: #F3F4F4 url(../img/trash.png) center no-repeat;
+  background-size: 60%;
+}
+
+.task__button--remove {
+  background: #F3F4F4 url(../img/arrow.png) center no-repeat;
+  background-size: 60%;
+}
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -506,12 +552,6 @@ li {
 @media (max-width: 768px) {
   .card:nth-child(2) {
     margin: 0 3.7%;
-  }
-}
-
-@media (max-width: 700px) {
-  .card:nth-child(2) {
-    margin: 0 5%;
   }
 }
 

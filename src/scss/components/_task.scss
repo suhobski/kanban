@@ -1,7 +1,7 @@
 .task{
   position: relative;
   margin-bottom: 8px;
-  padding: 16px;
+  padding: 1em 1em .5em;
 
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
@@ -80,6 +80,48 @@
     background: #FFFFFF;
     box-shadow: -10px 0 7px 2px #FFFFFF;
     cursor: pointer;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    padding-top: 4px;
+  }
+
+  &__date {
+    flex: auto;
+    
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    color: #5A5A65;
+  }
+
+  &__button {
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: .5em;
+
+    background: #F3F4F4;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #E6E6E6;
+    }
+  
+    &--delete {
+      background: #F3F4F4 url(../img/trash.png) center no-repeat;
+      background-size: 60%;
+    }
+
+    &--remove {
+      background: #F3F4F4 url(../img/arrow.png) center no-repeat;
+      background-size: 60%;
+    }
   }
 
 }
