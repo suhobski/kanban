@@ -1,7 +1,7 @@
 import { hideLongComment,displayFullComment } from './comment.js'
 import { displayModalAddTask, closeModalAddTaskListeners, createListOfUsers } from './modalAddTask.js'
 import { deleteTask } from './taskView.js'
-import { loadTasks } from './card.js'
+import { loadTasks, taskCounter } from './card.js'
 
 export function view() {
   // комментарий задачи
@@ -18,4 +18,5 @@ export function view() {
 
   // card
   loadTasks()
+  taskCounter()
 }

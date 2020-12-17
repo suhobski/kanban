@@ -1,4 +1,3 @@
-import { displayTask, deleteTask } from '../view/taskView.js'
 import { saveTaskInLocalStorage, deleteTaskFromLocalStorage } from './localStorage.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
@@ -11,7 +10,8 @@ export function moveTask() {
     if (event.target.classList.contains('task__button--move')) {
       // переносим задачу в список "In progress"
       const taskHTML = event.target.closest('.task')
-      cardListInProgress.appendChild(taskHTML )
+      cardListInProgress.appendChild(taskHTML)
+
 
       // переносим объект задачи в массив "inProgress" в localStorage
       const taskObject = JSON.parse(localStorage.getItem('todo')).find(task => task.id == taskHTML.id)
