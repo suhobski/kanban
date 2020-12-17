@@ -36,5 +36,20 @@ export function moveTask() {
 
   })
 
+  // из "Done" обратно в "To do"
+  cardListDone.addEventListener('click', event => {
+    if (event.target.classList.contains('task__button--move')) {
+      // переносим задачу в список "Done"
+      const taskHTML = event.target.closest('.task')
+      cardListTodo.appendChild(taskHTML )
+
+      // переносим объект задачи в массив "inProgress" в localStorage
+      const taskObject = JSON.parse(localStorage.getItem('done')).find(task => task.id == taskHTML.id)
+      deleteTaskFromLocalStorage('done', taskObject.id)
+      saveTaskInLocalStorage('todo', taskObject)
+    }
+
+  })
+
 
 }
