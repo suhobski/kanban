@@ -32,12 +32,12 @@ export function displayTask(where, task) {
   where.insertAdjacentHTML('beforeend', taskHTML)
 }
 
-// удаляем задачу =======================================================================================
+// перенести задачу
+
+// удалить задачу =======================================================================================
 export function deleteTask() {
 
   // из списка "To do"
-  const cardListTodo = document.querySelector('.card__list--todo')
-  
   cardListTodo.addEventListener('click', event => {
   if (event.target.classList.contains('task__button--delete')) {
     const task = event.target.closest('.task')
@@ -47,21 +47,19 @@ export function deleteTask() {
   })
 
   // из списка "In progress"
-  const listInProgress = document.querySelector('.card__list--in-progress')
-
-  listInProgress.addEventListener('click', event => {
+  cardListInProgress.addEventListener('click', event => {
   if (event.target.classList.contains('task__button--delete')) {
     const task = event.target.closest('.task')
+    deleteTaskFromLocalStorage('inProgress', task.id)
     task.outerHTML = ''
     }
   })
 
   // из списка "Done"
-  const listDone = document.querySelector('.card__list--done')
-
-  listDone.addEventListener('click', event => {
+  cardListDone.addEventListener('click', event => {
   if (event.target.classList.contains('task__button--delete')) {
     const task = event.target.closest('.task')
+    deleteTaskFromLocalStorage('done', task.id)
     task.outerHTML = ''
     }
   })
