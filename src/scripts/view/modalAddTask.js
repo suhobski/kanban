@@ -2,7 +2,7 @@ import { getUsersData } from '../model/serverData.js'
 
 // Переменные
 let modalAddTask = document.querySelector('.modal-add-task')
-let buttonAddTask = document.querySelector('.button__add-task')
+let buttonAddTask = document.querySelector('.card__button--add-task')
 let buttonOk = document.querySelector('.modal-add-task__button--ok')
 let buttonCancel = document.querySelector('.modal-add-task__button--cancel')
 

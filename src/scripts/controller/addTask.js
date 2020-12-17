@@ -1,6 +1,7 @@
 import { Task } from '../model/task.js'
 import { closeModalAddTask } from '../view/modalAddTask.js'
 import { displayTask } from '../view/taskView.js'
+import { saveTask } from './localStorage.js'
 
 let modalTitle = document.querySelector('.modal-add-task__field--title')
 let modalUser = document.querySelector('.modal-add-task__field--user-list')
@@ -36,16 +37,4 @@ export function addTask() {
       }
     }
   })
-}
-
-// сохранить данные в localStorage
-function saveTask(task) {
-  // проверяем наличие 'todo' в localStorage
-  if (localStorage.getItem('todo')) {
-    let todoArray = JSON.parse(localStorage.getItem('todo'))  // если есть, сохраняем себе
-    todoArray.push(task)                                      // добавялем новую задачу
-    localStorage.setItem('todo', JSON.stringify(todoArray))   // сохраняем обратно
-  } else {
-    localStorage.setItem('todo', JSON.stringify([task]))      // иначе просто сохраняем 
-  }
 }

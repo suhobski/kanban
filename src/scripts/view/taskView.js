@@ -1,13 +1,17 @@
-let cardListTodo = document.querySelector('.card__list--todo')
+import { deleteTaskFromLocalStorage } from '../controller/localStorage.js'
 
+const cardListTodo = document.querySelector('.card__list--todo')
+
+const commentTemplate = `<p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>`
+
+// добавить задачу в список "To do" ===================================================================
 export function displayTask(task) {
   const {id, title, userName, date, comment} = task
-  let commentHTML = ''
   
   if (comment) {
-    commentHTML = `
-    <p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>
-    `
+    commentHTML = commentTemplate
+  } else {
+    commentHTML = ''
   }
 
   const taskHTML = `
@@ -28,17 +32,16 @@ export function displayTask(task) {
   cardListTodo.insertAdjacentHTML('beforeend', taskHTML)
 }
 
-// удаляем задачу
+// удаляем задачу =======================================================================================
 export function deleteTask() {
 
   // из списка "To do"
-  const listTodo = document.querySelector('.card__list--todo')
+  const cardListTodo = document.querySelector('.card__list--todo')
   
-  listTodo.addEventListener('click', event => {
+  cardListTodo.addEventListener('click', event => {
   if (event.target.classList.contains('task__button--delete')) {
     const task = event.target.closest('.task')
-    console.log(task)
-    console.dir(task)
+    deleteTaskFromLocalStorage('todo', task.id)
     task.outerHTML = ''
     }
   })

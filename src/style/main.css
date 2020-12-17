@@ -538,6 +538,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 33%;
   padding: 8px;
   position: relative;
   max-width: 500px;
@@ -613,6 +614,12 @@ li {
           justify-content: flex-end;
 }
 
+.card__footer--todo {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .card__button {
   width: 100px;
   margin-left: 8px;
@@ -656,6 +663,10 @@ li {
 
 .card__button--done:hover {
   background: #D4C5DF;
+}
+
+.card__button--add-task {
+  margin-left: 0;
 }
 
 .modal-add-task {
