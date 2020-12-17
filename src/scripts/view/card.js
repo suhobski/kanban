@@ -12,11 +12,11 @@ export function loadTasks() {
   if (todoArray) todoArray.forEach(task => displayTask(cardListTodo, task))
 
   // в закладку "In Progress"
-  // const inProgressArray = JSON.parse(localStorage.getItem('inProgress'))
-  // if (inProgressArray) inProgressArray.forEach(task => displayTask(cardListInProgress, task))
+  const inProgressArray = JSON.parse(localStorage.getItem('inProgress'))
+  if (inProgressArray) inProgressArray.forEach(task => displayTask(cardListInProgress, task))
   
   // в закладку "Done"
-  // const doneArray = JSON.parse(localStorage.getItem('done'))
-  // if (doneArray) doneArray.forEach(task => displayTask(cardListDone, task))
+  const doneArray = JSON.parse(localStorage.getItem('done'))
+  if (doneArray) doneArray.forEach(task => displayTask(cardListDone, task))
 
 }

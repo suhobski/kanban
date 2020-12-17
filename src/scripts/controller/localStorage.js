@@ -1,12 +1,12 @@
 // сохранить задачу в localStorage===========================================================================
-export function saveTask(task) {
+export function saveTaskInLocalStorage(where, task) {
   // проверяем наличие 'todo' в localStorage
-  if (localStorage.getItem('todo')) {
-    const todoArray = JSON.parse(localStorage.getItem('todo'))  // если есть, сохраняем себе
-    todoArray.push(task)                                      // добавялем новую задачу
-    localStorage.setItem('todo', JSON.stringify(todoArray))   // сохраняем обратно
+  if (localStorage.getItem(where)) {
+    const tasksArray = JSON.parse(localStorage.getItem(where))  // если есть, сохраняем себе
+    tasksArray.push(task)                                      // добавялем новую задачу
+    localStorage.setItem(where, JSON.stringify(tasksArray))   // сохраняем обратно
   } else {
-    localStorage.setItem('todo', JSON.stringify([task]))      // иначе просто сохраняем 
+    localStorage.setItem(where, JSON.stringify([task]))      // иначе просто сохраняем 
   }
 }
 

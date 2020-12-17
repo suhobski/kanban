@@ -8,7 +8,7 @@ const cardListDone = document.querySelector('.card__list--done')
 // добавить задачу  =======================================================================================
 export function displayTask(where, task) {
   const {id, title, userName, date, comment} = task
-  const commentHTML = ''
+  let commentHTML = ''
   
   if (comment) {
     commentHTML = `<p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>`
@@ -24,7 +24,7 @@ export function displayTask(where, task) {
                       <div class="task__footer">
                         <span class="task__date">${date}</span>
                         <button class="task__button task__button--delete"></button>
-                        <button class="task__button task__button--remove"></button>
+                        <button class="task__button task__button--move"></button>
                       </div>
                     </li>
                     `

@@ -524,7 +524,7 @@ li {
   background-size: 60%;
 }
 
-.task__button--remove {
+.task__button--move {
   background: #F3F4F4 url(../img/arrow.png) center no-repeat;
   background-size: 60%;
 }

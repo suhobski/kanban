@@ -1,7 +1,7 @@
 import { Task } from '../model/task.js'
 import { closeModalAddTask } from '../view/modalAddTask.js'
 import { displayTask } from '../view/taskView.js'
-import { saveTask } from './localStorage.js'
+import { saveTaskInLocalStorage } from './localStorage.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
 
@@ -23,7 +23,7 @@ export function addTask() {
     // проверка на заполнение обязательных полей
     if (taskTitle && taskUser) {
       let task = new Task(taskTitle, taskUser, taskDate, taskComment)
-      saveTask(task)
+      saveTaskInLocalStorage('todo', task)
       closeModalAddTask()
       displayTask(cardListTodo, task)
     } else { // показываем предупреждение, если поле не заполнено

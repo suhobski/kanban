@@ -1,6 +1,7 @@
 import { addTask } from './addTask.js'
+import { moveTask } from './moveTask.js'
 
 export function controller() {
-  // собираем дананные о задаче
   addTask()
+  moveTask()
 }
