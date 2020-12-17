@@ -1,8 +1,7 @@
 export class Task {
-  static id = 0
   
   constructor(title, userName, date, comment) {
-    this.id = Task.id++
+    this.id = `f${(~~(Math.random()*1e8)).toString(16)}`
     this.title = title
     this.userName = userName
     this.date = date

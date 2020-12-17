@@ -9,14 +9,14 @@ export function loadTasks() {
   
   // в закладку "To do"
   const todoArray = JSON.parse(localStorage.getItem('todo'))
-  todoArray.forEach(task => displayTask(cardListTodo, task))
+  if (todoArray) todoArray.forEach(task => displayTask(cardListTodo, task))
 
   // в закладку "In Progress"
   // const inProgressArray = JSON.parse(localStorage.getItem('inProgress'))
-  // inProgressArray.forEach(task => displayTask(cardListInProgress, task))
+  // if (inProgressArray) inProgressArray.forEach(task => displayTask(cardListInProgress, task))
   
   // в закладку "Done"
-  // const todoArray = JSON.parse(localStorage.getItem('done'))
-  // todoArray.forEach(task => displayTask(cardListDone, task))
+  // const doneArray = JSON.parse(localStorage.getItem('done'))
+  // if (doneArray) doneArray.forEach(task => displayTask(cardListDone, task))
 
 }
