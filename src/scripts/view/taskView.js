@@ -2,16 +2,13 @@ import { deleteTaskFromLocalStorage } from '../controller/localStorage.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
 
-const commentTemplate = `<p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>`
-
 // добавить задачу в список "To do" ===================================================================
-export function displayTask(task) {
+export function displayTask(where, task) {
   const {id, title, userName, date, comment} = task
+  const commentHTML = ''
   
   if (comment) {
-    commentHTML = commentTemplate
-  } else {
-    commentHTML = ''
+    commentHTML = `<p class="task__comment">${comment}<button class="task__button--full-comment">...more</button></p>`
   }
 
   const taskHTML = `
@@ -29,7 +26,7 @@ export function displayTask(task) {
                     </li>
                     `
 
-  cardListTodo.insertAdjacentHTML('beforeend', taskHTML)
+  where.insertAdjacentHTML('beforeend', taskHTML)
 }
 
 // удаляем задачу =======================================================================================

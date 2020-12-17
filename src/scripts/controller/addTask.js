@@ -3,6 +3,8 @@ import { closeModalAddTask } from '../view/modalAddTask.js'
 import { displayTask } from '../view/taskView.js'
 import { saveTask } from './localStorage.js'
 
+const cardListTodo = document.querySelector('.card__list--todo')
+
 let modalTitle = document.querySelector('.modal-add-task__field--title')
 let modalUser = document.querySelector('.modal-add-task__field--user-list')
 let modalComment = document.querySelector('.modal-add-task__field--comment')
@@ -23,7 +25,7 @@ export function addTask() {
       let task = new Task(taskTitle, taskUser, taskDate, taskComment)
       saveTask(task)
       closeModalAddTask()
-      displayTask(task)
+      displayTask(cardListTodo, task)
     } else { // показываем предупреждение, если поле не заполнено
       // проверка Title
       if (!taskTitle) {
