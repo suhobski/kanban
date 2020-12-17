@@ -529,6 +529,11 @@ li {
   background-size: 60%;
 }
 
+.card__list--done .task__button--move {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .card {
   position: relative;
   display: -webkit-box;
