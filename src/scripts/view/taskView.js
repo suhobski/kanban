@@ -1,8 +1,11 @@
 import { deleteTaskFromLocalStorage } from '../controller/localStorage.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
+const cardListInProgress = document.querySelector('.card__list--in-progress')
+const cardListDone = document.querySelector('.card__list--done')
 
-// добавить задачу в список "To do" ===================================================================
+
+// добавить задачу  =======================================================================================
 export function displayTask(where, task) {
   const {id, title, userName, date, comment} = task
   const commentHTML = ''

@@ -2,7 +2,7 @@
 export function saveTask(task) {
   // проверяем наличие 'todo' в localStorage
   if (localStorage.getItem('todo')) {
-    let todoArray = JSON.parse(localStorage.getItem('todo'))  // если есть, сохраняем себе
+    const todoArray = JSON.parse(localStorage.getItem('todo'))  // если есть, сохраняем себе
     todoArray.push(task)                                      // добавялем новую задачу
     localStorage.setItem('todo', JSON.stringify(todoArray))   // сохраняем обратно
   } else {
