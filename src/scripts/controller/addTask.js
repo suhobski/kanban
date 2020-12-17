@@ -3,7 +3,6 @@ import { closeModalAddTask } from '../view/modalAddTask.js'
 import { displayTask } from '../view/taskView.js'
 
 let modalTitle = document.querySelector('.modal-add-task__field--title')
-let modalDate = document.querySelector('.modal-add-task__field--date')
 let modalUser = document.querySelector('.modal-add-task__field--user-list')
 let modalComment = document.querySelector('.modal-add-task__field--comment')
 let buttonOk = document.querySelector('.modal-add-task__button--ok')
@@ -12,11 +11,14 @@ export function addTask() {
   buttonOk.addEventListener('click', () => {
     let taskTitle = modalTitle.value
     let taskUser = modalUser.options[modalUser.selectedIndex].value
-    let taskDate = modalDate.value
     let taskComment = modalComment.value
 
+    const date = new Date()
+    let taskDate = `${date.getDate()}.${date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()}.${date.getUTCFullYear()}`
+
+
     // проверка на заполнение обязательных полей
-    if (taskTitle && taskUser && taskDate) {
+    if (taskTitle && taskUser) {
       let task = new Task(taskTitle, taskUser, taskDate, taskComment)
       saveTask(task)
       closeModalAddTask()
@@ -31,11 +33,6 @@ export function addTask() {
       if (!taskUser) {
         modalUser.style.background = '#FFDCE0'
         setTimeout(() => modalUser.style.background = '#FFFFFF', 1000)
-      }
-      // проверка Date
-      if (!taskDate) {
-        modalDate.style.background = '#FFDCE0'
-        setTimeout(() => modalDate.style.background = '#FFFFFF', 1000)
       }
     }
   })
