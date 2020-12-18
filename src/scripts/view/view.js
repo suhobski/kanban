@@ -2,6 +2,7 @@ import { displayModalAddTask, closeModalAddTaskListeners, createListOfUsers } fr
 import { deleteTask } from './taskView.js'
 import { loadTasks, taskCounter, clearAllTasks } from './card.js'
 import { displayComment } from './commentView.js'
+import { closeModalAlert } from './modalAlert.js'
 
 
 export function view() {
@@ -10,6 +11,9 @@ export function view() {
   closeModalAddTaskListeners()
   createListOfUsers()
 
+  // модальное окно "Alert"
+  closeModalAlert()
+  
   // task
   deleteTask()
 
