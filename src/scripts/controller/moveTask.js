@@ -1,4 +1,5 @@
 import { saveTaskInLocalStorage, deleteTaskFromLocalStorage } from './localStorage.js'
+import { taskCounter } from '../view/card.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
 const cardListInProgress = document.querySelector('.card__list--in-progress')
@@ -12,6 +13,8 @@ export function moveTask() {
       const taskHTML = event.target.closest('.task')
       cardListInProgress.appendChild(taskHTML)
 
+      // пересчитываем количество задач в каждом списке
+      taskCounter()
 
       // переносим объект задачи в массив "inProgress" в localStorage
       const taskObject = JSON.parse(localStorage.getItem('todo')).find(task => task.id == taskHTML.id)
@@ -28,6 +31,9 @@ export function moveTask() {
       const taskHTML = event.target.closest('.task')
       cardListDone.appendChild(taskHTML )
 
+      // пересчитываем количество задач в каждом списке
+      taskCounter()
+
       // переносим объект задачи в массив "inProgress" в localStorage
       const taskObject = JSON.parse(localStorage.getItem('inProgress')).find(task => task.id == taskHTML.id)
       deleteTaskFromLocalStorage('inProgress', taskObject.id)
@@ -42,6 +48,9 @@ export function moveTask() {
       // переносим задачу в список "Done"
       const taskHTML = event.target.closest('.task')
       cardListTodo.appendChild(taskHTML )
+
+      // пересчитываем количество задач в каждом списке
+      taskCounter()
 
       // переносим объект задачи в массив "inProgress" в localStorage
       const taskObject = JSON.parse(localStorage.getItem('done')).find(task => task.id == taskHTML.id)

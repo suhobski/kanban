@@ -22,13 +22,12 @@ export function loadTasks() {
 }
 
 const counterTodo = document.querySelector('.card__counter--todo')
-const counterInProgress = document.querySelector('.card__counter--in-progress')
+const counterInProgress = document.querySelector('.card__counter--in-ppogress')
 const counterDone = document.querySelector('.card__counter--done')
 
 // изменяем счетчик количества задач в каждом списке
 export function taskCounter() {
   counterTodo.innerText = cardListTodo.childElementCount
-  // console.log(cardListTodo.childElementCount);
-  // counterInProgress.innerText = cardListInProgress.childElementCount
+  counterInProgress.innerText = cardListInProgress.childElementCount
   counterDone.innerText = cardListDone.childElementCount
 }

@@ -1,4 +1,5 @@
 import { deleteTaskFromLocalStorage } from '../controller/localStorage.js'
+import { taskCounter } from './card.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
 const cardListInProgress = document.querySelector('.card__list--in-progress')
@@ -30,9 +31,11 @@ export function displayTask(where, task) {
                     `
 
   where.insertAdjacentHTML('beforeend', taskHTML)
+
+  // пересчитываем количество задач в каждом списке
+  taskCounter()
 }
 
-// перенести задачу
 
 // удалить задачу =======================================================================================
 export function deleteTask() {
@@ -43,6 +46,9 @@ export function deleteTask() {
     const task = event.target.closest('.task')
     deleteTaskFromLocalStorage('todo', task.id)
     task.outerHTML = ''
+
+    // пересчитываем количество задач в каждом списке
+    taskCounter()
     }
   })
 
@@ -52,6 +58,9 @@ export function deleteTask() {
     const task = event.target.closest('.task')
     deleteTaskFromLocalStorage('inProgress', task.id)
     task.outerHTML = ''
+
+    // пересчитываем количество задач в каждом списке
+    taskCounter()
     }
   })
 
@@ -61,6 +70,9 @@ export function deleteTask() {
     const task = event.target.closest('.task')
     deleteTaskFromLocalStorage('done', task.id)
     task.outerHTML = ''
+
+    // пересчитываем количество задач в каждом списке
+    taskCounter()
     }
   })
 }
