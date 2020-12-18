@@ -1,6 +1,6 @@
 export function hideComment(node) {
   const comment = node.querySelector('.task__comment')
-  if (comment.clientHeight > 34) {
+  if (comment && comment.clientHeight > 34) {
     comment.style.height = '34px'
     comment.querySelector('.task__button--full-comment').style.display = 'block'
   }  

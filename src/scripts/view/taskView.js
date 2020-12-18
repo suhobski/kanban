@@ -1,5 +1,6 @@
 import { deleteTaskFromLocalStorage } from '../controller/localStorage.js'
 import { taskCounter } from './card.js'
+import { displayModalDelete } from './modalDelete.js'
 
 const cardListTodo = document.querySelector('.card__list--todo')
 const cardListInProgress = document.querySelector('.card__list--in-progress')
@@ -55,12 +56,7 @@ export function deleteTask() {
   // из списка "In progress"
   cardListInProgress.addEventListener('click', event => {
   if (event.target.classList.contains('task__button--delete')) {
-    const task = event.target.closest('.task')
-    deleteTaskFromLocalStorage('inProgress', task.id)
-    task.outerHTML = ''
-
-    // пересчитываем количество задач в каждом списке
-    taskCounter()
+    displayModalDelete(event)
     }
   })
 

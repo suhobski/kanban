@@ -3,6 +3,7 @@ import { deleteTask } from './taskView.js'
 import { loadTasks, taskCounter, clearAllTasks } from './card.js'
 import { displayComment } from './commentView.js'
 import { closeModalAlert } from './modalAlert.js'
+import { closeModalDelete } from './modalDelete'
 
 
 export function view() {
