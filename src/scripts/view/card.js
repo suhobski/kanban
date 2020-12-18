@@ -1,4 +1,5 @@
 import { displayTask } from './taskView.js'
+import { hideAllComments } from './commentView.js'
 
 // ! Списки задач ==========================================================================================
 const cardListTodo = document.querySelector('.card__list--todo')
@@ -31,6 +32,8 @@ export function loadTasks() {
   const doneArray = JSON.parse(localStorage.getItem('done'))
   if (doneArray) doneArray.forEach(task => displayTask(cardListDone, task))
 
+  // сворачиваем длинные комментарии
+  hideAllComments()    
 }
 
 // изменяем счетчик количества задач в каждом списке=======================================================

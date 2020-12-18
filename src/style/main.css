@@ -433,13 +433,6 @@ li {
   z-index: 20;
 }
 
-.task__owner {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.1px;
-  color: #5A5A65;
-}
-
 .task__title {
   margin-bottom: 8px;
   font-weight: 600;

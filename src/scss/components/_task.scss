@@ -24,13 +24,6 @@
     z-index: 20;
   }
 
-  &__owner {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.1px;
-    color: #5A5A65;
-  }
-
   &__title {
     margin-bottom: 8px;
 
@@ -45,7 +38,6 @@
     position: relative;
 
     display: block;
-    // height: 37px;
 
     font-size: 14px;
     line-height: 17px;

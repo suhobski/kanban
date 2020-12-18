@@ -1,13 +1,10 @@
-import { hideLongComment,displayFullComment } from './comment.js'
 import { displayModalAddTask, closeModalAddTaskListeners, createListOfUsers } from './modalAddTask.js'
 import { deleteTask } from './taskView.js'
 import { loadTasks, taskCounter, clearAllTasks } from './card.js'
+import { displayComment } from './commentView.js'
+
 
 export function view() {
-  // комментарий задачи
-  hideLongComment()
-  displayFullComment()
-
   // модальное окно "Add task"
   displayModalAddTask()
   closeModalAddTaskListeners()
@@ -20,4 +17,7 @@ export function view() {
   loadTasks()
   taskCounter()
   clearAllTasks()
+
+  // комментарий задачи
+  displayComment()
 }
