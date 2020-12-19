@@ -11,7 +11,7 @@ export function moveTask() {
   // из "To do" в "In progress"
   cardListTodo.addEventListener('click', event => {
     if (event.target.classList.contains('task__button--move')) {
-      if ((JSON.parse(localStorage.getItem('inProgress'))).length == 5) {
+      if (localStorage.getItem('inProgress') && (JSON.parse(localStorage.getItem('inProgress'))).length == 5) {
         openModalAlert()
       } else {
         // переносим задачу в список "In progress"
