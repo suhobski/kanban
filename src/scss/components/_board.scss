@@ -2,7 +2,6 @@
 .board {
   @include sm {
     padding: 0 .5em;
-    overflow: hidden;
   }
 
   @include xs {
@@ -16,4 +15,30 @@
 
   margin: 0 auto;
   max-width: 1200px;
+
+  &:before,
+  &:after {
+    @include xs {
+      display: block;
+    }
+
+    position: absolute;
+
+    display: none;
+    content: '';
+    width: 7vw;
+    height: 100%;
+
+    background: red;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+  }
 }

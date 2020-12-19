@@ -404,7 +404,6 @@ li {
 @media (max-width: 768px) {
   .board {
     padding: 0 .5em;
-    overflow: hidden;
   }
 }
 
@@ -413,6 +412,31 @@ li {
     padding: 0;
     overflow-x: scroll;
   }
+}
+
+.board:before, .board:after {
+  position: absolute;
+  display: none;
+  content: '';
+  width: 7vw;
+  height: 100%;
+  background: red;
+}
+
+@media (max-width: 667px) {
+  .board:before, .board:after {
+    display: block;
+  }
+}
+
+.board::before {
+  top: 0;
+  left: 0;
+}
+
+.board::after {
+  top: 0;
+  right: 0;
 }
 
 .task {
