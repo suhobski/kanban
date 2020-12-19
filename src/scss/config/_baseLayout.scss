@@ -13,22 +13,11 @@
   background: #555555;
 }
 
-.board {
-  @include sm {
-    padding: 0 .5em;
-    overflow: hidden;
-  }
-
+.right {
   @include xs {
-    padding: 0;
-    padding-right: 5vw;
-    overflow-x: scroll;
+    display: block;
+    min-width: 5vw;
+    min-height: 1px;
   }
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  margin: 0 auto;
-  max-width: 1200px;
+  display: none;
 }

@@ -375,6 +375,18 @@ li {
   }
 }
 
+.right {
+  display: none;
+}
+
+@media (max-width: 667px) {
+  .right {
+    display: block;
+    min-width: 5vw;
+    min-height: 1px;
+  }
+}
+
 .board {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,7 +411,6 @@ li {
 @media (max-width: 667px) {
   .board {
     padding: 0;
-    padding-right: 5vw;
     overflow-x: scroll;
   }
 }
@@ -565,6 +576,12 @@ li {
 @media (max-width: 667px) {
   .card:nth-child(2) {
     margin: 0 5vw;
+  }
+}
+
+@media (max-width: 667px) {
+  .card:nth-child(3) {
+    margin-right: 0;
   }
 }
 

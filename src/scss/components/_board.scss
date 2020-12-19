@@ -1,0 +1,19 @@
+
+.board {
+  @include sm {
+    padding: 0 .5em;
+    overflow: hidden;
+  }
+
+  @include xs {
+    padding: 0;
+    overflow-x: scroll;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 0 auto;
+  max-width: 1200px;
+}
