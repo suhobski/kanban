@@ -399,7 +399,7 @@ main {
 }
 
 .footer__text {
-  margin: 1em 0 .5em;
+  margin: .5em 0;
 }
 
 .board {
@@ -486,13 +486,12 @@ main {
 .task__button--full-comment {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   display: none;
   padding-right: 5px;
-  font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.1px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
   color: #5A5A65;
   border: none;
   background: #FFFFFF;
@@ -981,7 +980,8 @@ main {
   content: '';
   width: 7vw;
   min-height: 100%;
-  background: transparent;
+  background: #DDDDDD;
+  opacity: .1;
   outline: none;
   border: none;
 }
@@ -995,11 +995,42 @@ main {
 .slider__slide-left {
   top: 0;
   left: 0;
+  border-radius: 0 50px 50px 0;
   z-index: 20;
 }
 
 .slider__slide-right {
   top: 0;
   right: 0;
+  border-radius: 50px 0 0 50px;
+}
+
+.slider__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1em;
+  margin: .5em 0 1em;
+}
+
+.slider__dots--todo, .slider__dots--in-progress, .slider__dots--done {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: .5em;
+  border-radius: 50%;
+  background: #DDDDDD;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider__dots--todo {
+  background: #808080;
 }
 /*# sourceMappingURL=main.css.map */

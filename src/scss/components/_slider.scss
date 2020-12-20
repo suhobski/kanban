@@ -12,7 +12,8 @@
     width: 7vw;
     min-height: 100%;
 
-    background: transparent;
+    background: #DDDDDD;
+    opacity: .1;
     outline: none;
     border: none;
   }
@@ -20,6 +21,7 @@
   &__slide-left {
     top: 0;
     left: 0;
+    border-radius: 0 50px 50px 0;
 
     z-index: 20;
   }
@@ -27,5 +29,34 @@
   &__slide-right {
     top: 0;
     right: 0;
+
+    border-radius: 50px 0 0 50px;
+    // background: url(../img/arrow-angle-of-two-shapes.png) center no-repeat;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1em;
+    margin: .5em 0 1em;
+
+    &--todo,
+    &--in-progress,
+    &--done {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: .5em;
+
+      border-radius: 50%;
+      background: $second-font-color;
+
+      transition: all 0.5s;
+    }
+
+    &--todo {
+      background: #808080;
+    }
   }
 }
