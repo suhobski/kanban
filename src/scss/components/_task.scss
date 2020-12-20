@@ -8,6 +8,8 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
 
+  color: #5A5A65;
+
   z-index: 0;
 
   &__header {
@@ -31,14 +33,13 @@
     font-size: 16px;
     line-height: 19px;
     letter-spacing: -0.2px;
-    color: #212121;
+    color: #4D4D4D;
   }
 
   &__comment {
     position: relative;
 
     display: block;
-    // height: 37px;
 
     font-size: 14px;
     line-height: 17px;
@@ -46,13 +47,6 @@
     color: #5A5A65;
 
     overflow: hidden;
-
-    z-index: 0;
-  }
-
-  &__comment-owner{
-    padding-right: 3px;
-    font-weight: 600;
   }
 
   &__button--full-comment {
