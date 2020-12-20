@@ -3,13 +3,16 @@ import { closeModalAddTask } from '../view/modalAddTask.js'
 import { displayTask } from '../view/taskView.js'
 import { saveTaskInLocalStorage } from './localStorage.js'
 
+// ! Список задач "To do" ===================================================================================
 const cardListTodo = document.querySelector('.card__list--todo')
 
+// ! Поля модального окна "Add task" ========================================================================
 let modalTitle = document.querySelector('.modal-add-task__field--title')
 let modalUser = document.querySelector('.modal-add-task__field--user-list')
 let modalComment = document.querySelector('.modal-add-task__field--comment')
 let buttonOk = document.querySelector('.modal-add-task__button--ok')
 
+// Действие кнопки "Add task" ===============================================================================
 export function addTask() {
   buttonOk.addEventListener('click', () => {
     let taskTitle = modalTitle.value
@@ -18,7 +21,6 @@ export function addTask() {
 
     const date = new Date()
     let taskDate = `${date.getDate()}.${date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()}.${date.getUTCFullYear()}`
-
 
     // проверка на заполнение обязательных полей
     if (taskTitle && taskUser) {
