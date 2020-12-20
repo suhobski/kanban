@@ -9,45 +9,53 @@
 <script src="/main.d59c9882.js"></script></head>
 <body>
 <div class="page">
-  <button class="slider__slide-left"></button>
-  <div class="board">
-    <div class="card">
-      <div class="card__header">
-        <h2 class="card__title card__title--todo">To do</h2>
-        <p class="card__title card__title--todo card__counter--todo"></p>  
-      </div>
-      <ul class="card__list card__list--todo">
-      </ul>
-      <div class="card__footer card__footer--todo">
-        <button class="card__button card__button--todo card__button--add-task">Add task</button>
-        <button class="card__button card__button--todo card__button--todo--clear-all">Clear all</button>
-      </div>
-    </div> <!-- card todo -->
-    <div class="card">
-      <div class="card__header">
-        <h2 class="card__title card__title--in-progress">In progress</h2>
-        <p class="card__title card__title--in-progress card__counter--in-ppogress"></p>
-      </div>
-      <ul class="card__list card__list--in-progress">
-      </ul>
-      <div class="card__footer">
-        <button class="card__button card__button--in-progress card__button--in-progress--clear-all">Clear all</button>
-      </div>
-    </div> <!-- card in-progress -->
-    <div class="card">
-      <div class="card__header">
-        <h2 class="card__title card__title--done">Done</h2>
-        <p class="card__title card__title--done card__counter--done"></p>
-      </div>
-      <ul class="card__list card__list--done">
-      </ul>
-      <div class="card__footer">
-        <button class="card__button card__button--done card__button--done--clear-all">Clear all</button>
-      </div>
-    </div> <!-- card done -->
-    <div class="right"></div>
-  </div> <!-- board -->
-  <button class="slider__slide-right"></button>
+  <header class="header">
+    <h1 class="header__title">Simple canban</h1>
+  </header>
+  <main>
+    <button class="slider__slide-left"></button>
+    <div class="board">
+      <div class="card">
+        <div class="card__header">
+          <h2 class="card__title card__title--todo">To do</h2>
+          <p class="card__title card__title--todo card__counter--todo"></p>  
+        </div>
+        <ul class="card__list card__list--todo">
+        </ul>
+        <div class="card__footer card__footer--todo">
+          <button class="card__button card__button--todo card__button--add-task">Add task</button>
+          <button class="card__button card__button--todo card__button--todo--clear-all">Clear all</button>
+        </div>
+      </div> <!-- card todo -->
+      <div class="card">
+        <div class="card__header">
+          <h2 class="card__title card__title--in-progress">In progress</h2>
+          <p class="card__title card__title--in-progress card__counter--in-ppogress"></p>
+        </div>
+        <ul class="card__list card__list--in-progress">
+        </ul>
+        <div class="card__footer">
+          <button class="card__button card__button--in-progress card__button--in-progress--clear-all">Clear all</button>
+        </div>
+      </div> <!-- card in-progress -->
+      <div class="card">
+        <div class="card__header">
+          <h2 class="card__title card__title--done">Done</h2>
+          <p class="card__title card__title--done card__counter--done"></p>
+        </div>
+        <ul class="card__list card__list--done">
+        </ul>
+        <div class="card__footer">
+          <button class="card__button card__button--done card__button--done--clear-all">Clear all</button>
+        </div>
+      </div> <!-- card done -->
+      <div class="right"></div>
+    </div> <!-- board -->
+    <button class="slider__slide-right"></button>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">A. Suhobski, 2020</p>
+  </footer>
   <div class="modal-add-task">
     <div class="modal-add-task__container">
         <h4 class="modal-add-task__title">Add task</h4>

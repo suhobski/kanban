@@ -1,11 +1,7 @@
 
 .board {
-  @include sm {
-    padding: 0 .5em;
-  }
 
   @include xs {
-    padding: 0;
     overflow: hidden;
   }
 
