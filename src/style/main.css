@@ -362,6 +362,7 @@ li {
 }
 
 .page {
+  position: relative;
   padding: 14px;
   width: 100%;
   min-height: 100vh;
@@ -372,18 +373,6 @@ li {
 @media (max-width: 768px) {
   .page {
     padding: .5em 0;
-  }
-}
-
-.right {
-  display: none;
-}
-
-@media (max-width: 667px) {
-  .right {
-    display: block;
-    min-width: 5vw;
-    min-height: 1px;
   }
 }
 
@@ -410,33 +399,20 @@ li {
 @media (max-width: 667px) {
   .board {
     padding: 0;
-    overflow-x: scroll;
+    overflow: hidden;
   }
 }
 
-.board:before, .board:after {
-  position: absolute;
+.right {
   display: none;
-  content: '';
-  width: 7vw;
-  height: 100%;
-  background: red;
 }
 
 @media (max-width: 667px) {
-  .board:before, .board:after {
+  .right {
     display: block;
+    min-width: 1px;
+    min-height: 1px;
   }
-}
-
-.board::before {
-  top: 0;
-  left: 0;
-}
-
-.board::after {
-  top: 0;
-  right: 0;
 }
 
 .task {
@@ -578,6 +554,8 @@ li {
   min-width: 200px;
   background: #F3F4F4;
   border-radius: 12px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 667px) {
@@ -600,12 +578,6 @@ li {
 @media (max-width: 667px) {
   .card:nth-child(2) {
     margin: 0 5vw;
-  }
-}
-
-@media (max-width: 667px) {
-  .card:nth-child(3) {
-    margin-right: 0;
   }
 }
 
@@ -987,5 +959,32 @@ li {
 
 .modal-delete-task .menu {
   visibility: hidden;
+}
+
+.slider__slide-left, .slider__slide-right {
+  position: absolute;
+  display: none;
+  content: '';
+  width: 7vw;
+  min-height: 100%;
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 667px) {
+  .slider__slide-left, .slider__slide-right {
+    display: block;
+  }
+}
+
+.slider__slide-left {
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.slider__slide-right {
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=main.css.map */

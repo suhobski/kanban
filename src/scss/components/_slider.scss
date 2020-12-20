@@ -1,0 +1,30 @@
+.slider {
+  &__slide-left, 
+  &__slide-right {
+    @include xs {
+      display: block;
+    }
+
+    position: absolute;
+
+    display: none;
+    content: '';
+    width: 7vw;
+    min-height: 100%;
+
+    outline: none;
+    border: none;
+  }
+
+  &__slide-left {
+    top: 0;
+    left: 0;
+
+    z-index: 20;
+  }
+
+  &__slide-right {
+    top: 0;
+    right: 0;
+  }
+}

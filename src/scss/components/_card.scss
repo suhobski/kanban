@@ -1,7 +1,4 @@
 .card{
-  // @include sm {
-  //   min-width: 47%;
-  // }
 
   @include xs {
     min-width: 90vw;
@@ -22,6 +19,8 @@
   background: #F3F4F4;
   border-radius: 12px;
 
+  transition: all 0.5s;
+
   &:nth-child(2) {
     @include sm {
       margin: 0 .5em;
@@ -33,13 +32,6 @@
 
     margin: 0 1em;
   }
-
-  &:nth-child(3) {
-    @include xs {
-      margin-right: 0;
-    }
-  }
-
 
   &__header{
     display: flex;
