@@ -1,4 +1,4 @@
-# kanban
+# Simple kanban
 
 Link: https://suhobski.github.io/kanban/
 
