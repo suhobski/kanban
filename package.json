@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Oleg-Kolosov/7-days-to-deadline#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "node-forge": ">=0.10.0"
-  }
+    "node-forge": "^0.10.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {}
 }
