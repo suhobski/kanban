@@ -4,5 +4,3 @@ package.json
 package-lock.json
 .gitattributes
 .gitignore
-dist
-dist\index.html
