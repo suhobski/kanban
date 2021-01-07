@@ -578,6 +578,13 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  .card {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .card:nth-child(2) {
   margin: 0 1em;
 }
@@ -1031,12 +1038,12 @@ main {
   height: 10px;
   margin: .5em;
   border-radius: 50%;
-  background: #DDDDDD;
+  background: #808080;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .slider__dots--todo {
-  background: #808080;
+  background: #DDDDDD;
 }
 /*# sourceMappingURL=main.css.map */

@@ -31,7 +31,6 @@
     right: 0;
 
     border-radius: 50px 0 0 50px;
-    // background: url(../img/arrow-angle-of-two-shapes.png) center no-repeat;
   }
 
   &__dots {
@@ -54,13 +53,13 @@
       margin: .5em;
 
       border-radius: 50%;
-      background: $second-font-color;
+      background: #808080;
 
       transition: all 0.5s;
     }
 
     &--todo {
-      background: #808080;
+      background: #DDDDDD;
     }
   }
 }

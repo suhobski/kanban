@@ -5,6 +5,10 @@
     margin: 0 5vw;
   }
 
+  @include sm {
+    transform: translateX(0);
+  }
+
   position: relative;
 
   display: flex;
@@ -121,8 +125,6 @@
 
     &--add-task {
       margin-left: 0;
-    }
-    
+    } 
   }
-
 }
