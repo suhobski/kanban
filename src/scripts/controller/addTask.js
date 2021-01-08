@@ -20,7 +20,7 @@ export function addTask() {
     let taskComment = modalComment.value
 
     const date = new Date()
-    let taskDate = `${date.getDate()}.${date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()}.${date.getUTCFullYear()}`
+    let taskDate = `${date.getDate()}.${date.getMonth() < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth()+ 1)}.${date.getUTCFullYear()}`
 
     // проверка на заполнение обязательных полей
     if (taskTitle && taskUser) {
